@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>各种输入和输出方式</title>
+    </head>
+    <body>
+        <!-- div标签用于定义一个区域块，以便CSS来对其进行格式化 -->
+        <div style="color:#0000FF">
+            <h3>这是一个在 div 元素中的标题。</h3>
+            <p>这是一个在 div 元素中的文本。</p>
+        </div>
+        <!-- span标签用于CSS处理被包含的文本 -->
+        <p>我的母亲有 <span style="color:blue">蓝色</span> 的眼睛。</p>
+
+        <p>各种文本输入</p>
+        <!-- 文本输入区域 -->
+        <form action="">
+            <!-- 给文本输入区域加个边框 -->
+            <fieldset>
+                <!-- 边框标题 -->
+                <legend>Name</legend>
+                First Name: <input type="text" name="firstname"><br />
+                Last Name: <input type="text" name="lastname"><br />
+            </fieldset>
+        </form>
+        <!-- 密码输入区域 -->
+        <form>
+            Username: <input type="text" name="user"><br />
+            Password: <input type="password" name="password">
+        </form>
+        <!-- 多行文本输入区域 -->
+        <textarea rows="10" cols="30">这里是占位文本</textarea>
+
+        <!-- 单选框，name相当于分类。需要注意这里占位文本前的空格会显示在界面上 -->
+        <form action="demo_form.php">
+            <!-- label可以做到点击也激活单选框，不用用户去点小小的单选框 -->
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="male"><br />
+            <label for="female">Female</label>
+            <input type="radio" name="gender" value="female">
+        </form>
+        <!-- 多选框 -->
+        <form>
+            <input type="checkbox" name="vehicle" value="Bike">I have a bike<br />
+            <input type="checkbox" name="vehicle" value="Car">I have a car
+        </form>
+        <!-- 提交按钮 -->
+        <form name="input" action="html_form_action.php" method="get">
+            Username: <input type="text" name="user">
+            <input type="submit" value="Submit">
+        </form>
+        <!-- 自定义按钮 -->
+        <form action="">
+            <input type="button" value="这是一个按钮">
+        </form>
+        <!-- 下拉选项 -->
+        <p>System</p>
+        <select>
+            <!-- 下拉选项分组 -->
+            <optgroup label="Main System">
+                <option value="macos">macOS</option>
+                <option value="windows">Widnows</option>
+                <option value="linux">Linux</option>
+            </optgroup>
+        </select>
+        <br />
+        <!-- 点击按钮弹出弹窗 -->
+        <button type="button" onclick="alert('你好啊，世界')">点这里有惊喜</button><br />
+        <!-- 输入文本带备选 -->
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+        </datalist>
+        <!-- 显示计算结果或者脚本输出点结果 -->
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <!-- Slider -->
+            0<input type="range" id="a" value="50">100
+            <!-- 数值输入模块 -->
+            +<input type="number" id="b" value="50">
+            =<output name="x" for="a b"></output>
+        </form>
+    </body>
+</html>
