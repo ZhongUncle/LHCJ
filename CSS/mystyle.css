@@ -11,16 +11,184 @@ h1
     color: orange;
     text-align: center;
 }
-p
+/* 正常字体的段落设置 */
+p.normal
 {
     color: red;
     font-family: "Times New Roman";
     font-size: 20px;
     text-align: center;
+    /* 修饰文本，例如下划线等 */
+    text-decoration: overline;
+    /* 英文字母大小写转换 */
+    text-transform: capitalize;
+    /* 文本缩进 */
+    text-indent: 50px;
+
+    /* 设置字体 */
+    font-family: 'Times New Roman', Times, serif;
 }
-/* 定义一个ID选择器 */
+
+/* 创建一个ID选择器 */
 #para1
 {
     color: red;
     text-align: center;
+}
+/* 创建一个类型选择器 */
+div.parent{
+    color: red;
+    text-align: center;
+}
+
+/* 链接不同状态的设置 */
+a:link {color:#000000;}      /* 未访问链接*/
+a:visited {color:#00FF00;}  /* 已访问链接 */
+a:hover {color:#FF00FF;}  /* 鼠标移动到链接上 */
+a:active {color:#0000FF;}  /* 鼠标点击时 */
+
+/* 列表的样式 */
+/* list-style-image会更改列表图像标记 */
+ul.a {list-style-type:circle; list-style-image: url('images/icon.png');}
+ul.b {list-style-type:square;}
+ol.c {list-style-type:upper-roman;}
+ol.d {list-style-type:lower-alpha;}
+
+/* 表格的样式 */
+table,th,td
+{
+    border: 1px solid black;
+}
+/* 表格的宽 */
+table 
+{
+    width:100%;
+}
+/* 表格的高 */
+th
+{
+    height:50px;
+}
+td
+{
+    text-align: right;
+}
+
+/* 盒子模型 */
+div 
+{
+    background-color: lightgrey;
+    width: 300px;
+    padding: 25px;
+    border: 25px solid green;
+    margin: 25px;
+}
+
+/* 边框 */
+p.one
+{
+    /* 可以单独设置每个边的这些属性 */
+    /* 边框样式 */
+    border-style: solid;
+    /* 边框宽度 */
+    border-width: 5px;
+    /* 边框颜色 */
+    border-color: red;
+}
+
+/* 指定margin，指定padding的方法差不多 */
+p.margin
+{
+    margin-top:100px;
+    margin-bottom:100px;
+    margin-right:50px;
+    margin-left:50px;
+}
+
+/* 设置元素的位置 */
+/* static：默认状态，没有特别之处 */
+div.static
+{
+    position: static;
+    border: 3px solid #73ad21;
+}
+/* fixed：相对于浏览器窗口是固定位置 */
+p.pos_fixed
+{
+    position: fixed;
+    top: 30px;
+    right: 5px;
+}
+/* relative：相对位置，类似SwiftUI的offset */
+h2.pos_top
+{
+    position: relative;
+    top: -5px;
+}
+/* absolute：相对于最近的已被定位的父元素的绝对位置，如果没有已定位的父元素，那么相对于<html> */
+h2
+{
+    position:absolute;
+    left:100px;
+    top:150px;
+}
+/* sticky：给予用户滚动来定位 */
+div.sticky
+{
+    position: -webkit-sticky; /* Safari需要使用这个 */
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border: 2px solid #4CAF50;
+}
+
+/* 使用滚动条，防止元素溢出 */
+#overflowTest 
+{
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    width: 80%;
+    height: 100px;
+    overflow: scroll;
+    border: 1px solid #ccc;
+}
+
+/* 自动调整相邻的元素 */
+.thumbnail 
+{
+	float:left;
+	width:110px;
+	height:90px;
+	margin:5px;
+}
+
+/* 居中对齐 */
+.center {
+    /* 元素居中对齐 */
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    /* 文本居中对齐 */
+    text-align: center;
+    border: 3px solid green;
+}
+/* 图片居中对齐 */
+img {
+    display: block;
+    margin: auto;   /* 就是这行让图片居中的 */
+    width: 40%;
+}
+
+/* 左右对齐 */
+.right {
+    float: right;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+/* 对父元素加上以下代码来防止元素溢出 */
+.clearfix {
+    overflow: auto;
 }
