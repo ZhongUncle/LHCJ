@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>下拉菜单1</title>
+        <style>
+            .dropdown {
+                position: relative; /* 让下拉菜单的内容放在按钮的右下角位置 */
+                display: inline-block;
+            }
+            .dropdown-content {
+                /* 下拉菜单默认是隐藏的 */
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                padding: 12px 16px;
+            }
+            /* 让下拉菜单显现出来 */
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>鼠标移动后出现下拉菜单</h2>
+        <p>将鼠标移动到指定元素上就能看到下拉菜单。</p>
+
+        <div class="dropdown">
+            <span>鼠标移动到我这！</span>
+            <div class="dropdown-content">
+                <p>菜鸟教程</p>
+                 <p>www.runoob.com</p>
+            </div>
+        </div>
+    </body>
+</html>
