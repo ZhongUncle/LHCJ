@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript 学习</title>
+    </head>
+    <body>
+        <h1>
+            JavaScript能够直接写在 HTML 中
+        </h1>
+        <p id="demo">
+            Hello World!
+        </p>
+        <!-- 这里就是脚本 -->
+        <script>
+            function myFunction()
+            {
+                x=document.getElementById("demo");  //找到需要改变的元素的ID
+                if (x.innerHTML=="Hello JavaScript!"){
+                    x.innerHTML="Hello World!"
+                }else{
+                    x.innerHTML="Hello JavaScript!";    //改变元素内容
+                }
+            }
+        </script>
+        <!-- 点击按钮来调用函数 -->
+        <button type="button" onclick="myFunction()">点这里试试看</button>
+    </body>
+</html>
