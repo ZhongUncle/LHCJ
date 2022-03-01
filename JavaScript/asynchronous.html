@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript 异步</title>
+    </head>
+    <body>
+        <h1>
+            倒计时:<h1 id="timer">10</h1>
+        </h1>
+        <!-- 这里就是脚本 -->
+        <script>
+            // 一个倒计时器
+            setInterval(myFunction, 1000);
+            var time = 10;
+            function myFunction()
+            {
+                x=document.getElementById("timer"); 
+                
+                if (time > 0) {
+                    x.innerHTML=--time;
+                }else{
+                    x.innerHTML="结束啦";
+                }
+            }
+
+
+        </script>
+        <!-- 点击按钮来调用函数
+        <button type="button" onclick="myFunction()">点这里试试看</button> -->
+    </body>
+</html>
